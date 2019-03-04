@@ -1,9 +1,5 @@
 #!/usr/bin/env python
-# coding: utf-8
-
-# In[65]:
-
-
+import matplotlib.pyplot as plt
 import csv
 import random
 import math
@@ -42,9 +38,6 @@ def calc_centroid(cluster):
        return [x,y]
 
 
-# In[66]:
-
-
 s = "kms.csv"
 l = read_csv(s)
 kms_dataset = []
@@ -53,14 +46,8 @@ for row in l:
        kms_dataset.append(temp)
 
 
-# In[67]:
-
-
 c1 = [random.random(),random.random()]
 c2 = [random.random(),random.random()]
-
-
-# In[68]:
 
 
 cluster1 = []
@@ -68,14 +55,11 @@ cluster2 = []
 cluster1, cluster2 = perform_kms(kms_dataset, c1, c2)
 
 
-# In[69]:
-
 
 c1 = calc_centroid(cluster1)
 c2 = calc_centroid(cluster2)
 
 
-# In[70]:
 
 
 k = int(input("Enter k:"))
@@ -85,25 +69,20 @@ for i in range(k):
        c2 = calc_centroid(cluster2)
 
 
-# In[74]:
 
 
 print(cluster1)
 
 
-# In[75]:
-
 
 print(cluster2)
 
 
-# In[76]:
 
 
-import matplotlib.pyplot as plt
 
 
-# In[ ]:
+
 
 
 plt.plot([x[1] for x in cluster1], [x[2] for x in cluster1], "ro")
