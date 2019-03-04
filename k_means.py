@@ -71,18 +71,8 @@ for i in range(k):
 
 
 
-print(cluster1)
-
-
-
-print(cluster2)
-
-
-
-
-
-
-
+print("cluster1=\n",cluster1)
+print("cluster2=\n", cluster2)
 
 
 plt.plot([x[1] for x in cluster1], [x[2] for x in cluster1], "ro")
